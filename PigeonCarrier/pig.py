@@ -2,7 +2,7 @@ class bird:
   def __init__(self, flaps=15, information='hello'):
     self.flaps = flaps
     self.information = information #defualt message if there is no textdata
-    # self.information = textdata
+    self.information = textdata
 
   #def askformessage():
    # information=input("What message do you want the pigeon to carry?: ")
