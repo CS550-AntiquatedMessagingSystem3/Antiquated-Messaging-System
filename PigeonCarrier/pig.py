@@ -1,15 +1,17 @@
 class bird:
-  def __init__(self, flaps):
-    self.flaps = 15
+  def __init__(self, flaps=15, information='hello'):
+    self.flaps = flaps
+    self.information = information #defualt message if there is no textdata
+    # self.information = textdata
 
-  def askformessage():
-    information=input("What message do you want the pigeon to carry?: ")
+  #def askformessage():
+   # information=input("What message do you want the pigeon to carry?: ")
 
- def delivermessage():
-    print("Oh look, it's a carrirer pigeon! Let's see what is has to say...")
-    print(information)
+  def delivermessage(self):
+    #print("Oh look, it's a carrirer pigeon! Let's see what is has to say...")
+    print(self.information)
 
-  def fly(flaps):
+  def fly(self):
 
 
     import time
@@ -37,7 +39,7 @@ class bird:
                           |_____ ,^-(/ _____|
     """      
                                  
-    b="""                                            __
+    b="""                                                __
                                .----.         _/  |
                               /      \     __/    /
                            .-'  O     \ __/      /
@@ -69,7 +71,8 @@ class bird:
       time.sleep(.5)
       n=n+1
 
-bird.askformessage()
+bird = bird(3, "hi there")
+#bird.askformessage()
 bird.fly()
 bird.delivermessage()
 
