@@ -15,4 +15,4 @@ class encryption:
 			chr(ord(message[i])+self.shift)
 			changed = changed + str(chr(ord(message[i])+2))
 		
-		print(changed)
+		return(changed)
