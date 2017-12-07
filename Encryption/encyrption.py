@@ -13,6 +13,6 @@ class encryption:
 		
 		for i in range(len(textData)):
 			chr(ord(message[i])+self.shift)
-			changed = changed + str(chr(ord(textData[i])+2))
+			changed = changed + str(chr(ord(textData[i])+self.shift))
 		
 		return(changed)
