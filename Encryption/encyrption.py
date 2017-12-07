@@ -1,10 +1,8 @@
 class encryption:
-	def__init(self, message, shift)
+	def__init(self, message = 'hello', shift = 2)
 		self.message = message
 		self.shift = shift
-		self.message = 'hello'
-		self.shift = 2
-
+	
 	def message(self,message):
 		message = self.message
 		if self.message = '':
