@@ -14,7 +14,7 @@ while (codeMode < 1 or codeMode > 2):
         codeMode = int(input('Select the Mode:\n1: Encoding to send secret messages\n2: Decoding the secret message you recieved\nEnter the number corresponding to your Mode of operation:'))
     except ValueError:
         # Make sure it is a valid number
-        print("That wasn't a proper choice.")
+        print("That wasn't a proper choice.")#If number is not entered
         
         
 textBlock = []
@@ -31,7 +31,7 @@ if (codeMode ==1):
         sourceText = input('\nType text to encode one line at a time. Press enter to start a new line. Type Q in a separate line to end the message.')
         if sourceText.lower() == 'q':
             break
-        textBlock.append(sourceText)
+        textBlock.append(sourceText)#Add text
 
     
 
@@ -53,7 +53,7 @@ if (codeMode ==2):
             print("That wasn't a valid input file with secret code.")
     with open(inputFileName) as f:
         content = f.readlines()
-        textBlock =  [x.strip('\n') for x in content]
+        textBlock =  [x.strip('\n') for x in content]#Strip lines
 
 
 if (codeMode ==2):
@@ -69,12 +69,12 @@ if (codeMode ==2):
             e.message(textData)
             e.decrypt()
         if encodeChoice == 3:
-            p = pigeon.bird(3,textData)
+            p = pigeon.bird(3,textData)#Flaps three times, then has textData.
             p.fly()
 
 if (codeMode ==1):
     try:
-        os.remove("code.txt")
+        os.remove("code.txt")#Decoding
     except OSError:
         pass
     for textData in textBlock:
@@ -84,6 +84,6 @@ if (codeMode ==1):
             e = encryption.encryption()
             e.message(textData)
             e.shift()
-        if encodeChoice == 3:
+        if encodeChoice == 3:#Each choice
             p = pigeon.bird(3,textData)
             p.fly()
