@@ -1,7 +1,7 @@
 import os
 
 class encryption:
-    def __init__(self, textData = 'hello', shiftNumber = 2):
+    def __init__(self, textData = 'hello', shiftNumber = 2):#Default
         self.textData = textData
         self.shiftNumber = shiftNumber
     
@@ -12,7 +12,7 @@ class encryption:
 
     def shift(self):
         changed = ''  
-        for i in range(len(self.textData)):
+        for i in range(len(self.textData)):#Shifting
             changed = changed + str(chr(ord(self.textData[i])+self.shiftNumber))
         output_filename = os.path.normpath("code.txt")    
         file = open(output_filename,"a")
@@ -20,7 +20,7 @@ class encryption:
         file.close() 
         return(changed)
 
-    def decrypt(self):
+    def decrypt(self):#Decrypting, minus two steps back
         changed = ''  
         for i in range(len(self.textData)):
             changed = changed + str(chr(ord(self.textData[i])-self.shiftNumber))
