@@ -2,7 +2,7 @@ import os
 
 class Messenger:
 
-    morseAlphabet ={
+    morseAlphabet ={#Alphabet
             "A" : ".-",
             "B" : "-...",
             "C" : "-.-.",
@@ -72,17 +72,17 @@ class Messenger:
 
 class Transmitter:
     
-    def decodeFromMorse(textData):
+    def decodeFromMorse(textData):#Decode, inverse alphabet
         output_filename = os.path.normpath("decode.txt")    
         decodeText = Messenger.decodeFromMorse(textData)
         file = open(output_filename,"a")
-        file.write(decodeText + '\n')
+        file.write(decodeText + '\n')#Enter space every line
         file.close() 
         
     def encodeToMorse(textData):
         output_filename = os.path.normpath("code.txt")    
         encodeText = Messenger.encodeToMorse(textData)
-        file = open(output_filename,"a")
+        file = open(output_filename,"a")#Append text
         file.write(encodeText + '\n')
         file.close() 
 
