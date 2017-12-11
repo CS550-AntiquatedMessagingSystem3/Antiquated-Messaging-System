@@ -1,8 +1,8 @@
 class bird:
   def __init__(self, flaps=15, information='hello'): #Main function
     self.flaps = flaps
-    self.information = information #defualt message if there is no textdata
-    #self.information = textdata
+    self.information = information #defualt message if there is no user specified message as information
+    #self.information = textdata #ignore this, not used
 
 
   def delivermessage(self):#Deliver Message
@@ -63,12 +63,13 @@ class bird:
     while n <= self.flaps:
       print(a)
       print(self.information)#Prints info near scroll
-      time.sleep(.5)
+      time.sleep(.5)#time delay between print outs of pigeon (wings down)
       print(b)
-      time.sleep(.5)#Flapping time
+      time.sleep(.5)#time delay between print outs of pigeon (wings up)
       n=n+1
 
-#bird = bird(3, "hi there")
+      
+#bird = bird(3, "hi there") #ignore all this stuff for now, not used
 #bird.askformessage()
 #bird.fly()
 #bird.delivermessage()
