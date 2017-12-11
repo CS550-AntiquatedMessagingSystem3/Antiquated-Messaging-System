@@ -1,14 +1,12 @@
 class bird:
-  def __init__(self, flaps=15, information='hello'):
+  def __init__(self, flaps=15, information='hello'): #Main function
     self.flaps = flaps
     self.information = information #defualt message if there is no textdata
     #self.information = textdata
 
-  #def askformessage():
-   # information=input("What message do you want the pigeon to carry?: ")
 
-  def delivermessage(self):
-    #print("Oh look, it's a carrirer pigeon! Let's see what is has to say...")
+  def delivermessage(self):#Deliver Message
+
     print(self.information)
 
   def fly(self):
@@ -64,10 +62,10 @@ class bird:
     n=0
     while n <= self.flaps:
       print(a)
-      print(self.information)
+      print(self.information)#Prints info near scroll
       time.sleep(.5)
       print(b)
-      time.sleep(.5)
+      time.sleep(.5)#Flapping time
       n=n+1
 
 #bird = bird(3, "hi there")
