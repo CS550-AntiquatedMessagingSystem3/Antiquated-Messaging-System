@@ -1,3 +1,10 @@
+#Sources:
+#http://ascii.co.uk/art/pigeon
+#https://stackoverflow.com/questions/34980251/how-to-print-multiple-lines-of-text-with-python
+
+#In this file(PigeonFinal.py), we have created the 'bird' class, which is used to execute the pigeon carrier messaging method, one of our three methods of antiquated messenging.
+#Essentially, this class takes the universal input (or defualt 'hello'), and returns it after showing a flying pigeon with a scroll. 
+
 class bird:
   def __init__(self, flaps=15, information='hello'): #Main function
     self.flaps = flaps
@@ -7,7 +14,7 @@ class bird:
 
   def delivermessage(self):#Deliver Message
 
-    print(self.information)
+    return(self.information)
 
   def fly(self):
 
